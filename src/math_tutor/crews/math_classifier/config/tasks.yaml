@@ -10,5 +10,5 @@ determine_domain:
   expected_output: |
     Extract the question in {language} where:
       - Domain: <the mathematics domain of the question>
-      - Question: <the full question content without image path>
+      - Question: <the exactly question content without image path or any other irrelevant information>
       - Image path: <the path to the image of the question for the geometry domain only>

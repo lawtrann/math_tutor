@@ -20,7 +20,7 @@ class MathTutorState(BaseModel):
 
 
 class MathTutorFlow(Flow[MathTutorState]):
-    langtrace.init(api_key=os.environ.get('LANGTRACE_API_KEY'))
+    # langtrace.init(api_key=os.environ.get('LANGTRACE_API_KEY'))
     language = "Japanese"
 
     algebra = str(ALGEBRA).lower()

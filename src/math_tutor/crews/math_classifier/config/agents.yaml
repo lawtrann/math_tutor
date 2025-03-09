@@ -11,4 +11,3 @@ math_teacher:
   allow_delegation: true
   verbose: true
   llm: gemini/gemini-2.0-flash
-  temperature: 0.5

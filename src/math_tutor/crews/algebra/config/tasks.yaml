@@ -3,15 +3,13 @@ solve_question:
     Given question:
     {question}
     
-    To infer based on answer options if have: {answer_options}.
-    
-    - To understand the necessity and meaning of positive and negative numbers.
-    - To understand the meaning of the four fundamental operations with positive and negative numbers.
-    - To perform the four fundamental operations with positive and negative numbers.
-    - To represent and process by using positive and negative numbers in concrete situations.
-    Terms and Symbols: natural number, sign, absolute value.
-    
-    Analyze it, and solve the given question in step-by-step explanation.
+    To inter the above questions carefully.
+    Analyze them, and solve in step-by-step explanation based on the following:
+      - To understand the necessity and meaning of positive and negative numbers.
+      - To understand the meaning of the four fundamental operations with positive and negative numbers.
+      - To perform the four fundamental operations with positive and negative numbers.
+      - To represent and process by using positive and negative numbers in concrete situations.
+      - Terms and Symbols: natural number, sign, absolute value.
   expected_output: |
     Export a answer in {language} where:
       - Question: [the question]
