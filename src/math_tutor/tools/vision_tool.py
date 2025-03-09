@@ -1,16 +1,16 @@
 import base64
-from pathlib import Path
 from typing import Any, Type
 
 from crewai.tools import BaseTool
 from litellm import completion
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field
 
 
 class VisionToolSchema(BaseModel):
     """Input schema for VisionGoogleTool."""
 
     image_path: str = Field(..., description="Path to the image file.")
+    additional_context: str = Field("", description="The additional context that you need to ask for more visual to solve the question such as geometry.")
 
 
 class VisionTool(BaseTool):
@@ -42,7 +42,8 @@ class VisionTool(BaseTool):
                         "content": [
                             {
                                 "type": "text",
-                                "text": "To meticulously extract full content from a given picture without solving problem. Format to Markdown, no '```'.",
+                                "text": "To meticulously extract full content from a given picture without solving problem. Format to Markdown, no '```'. "
+                                        f"{kwargs.get('additional_context')}",
                             },
                             {
                                 "type": "image_url",

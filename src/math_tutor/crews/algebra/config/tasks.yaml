@@ -2,7 +2,8 @@ solve_question:
   description: |
     Given question:
     {question}
-    Based on the answer options if have: {answer_options}.
+    
+    To infer based on answer options if have: {answer_options}.
     
     - To understand the necessity and meaning of positive and negative numbers.
     - To understand the meaning of the four fundamental operations with positive and negative numbers.

@@ -20,7 +20,7 @@ class MathTutorState(BaseModel):
 
 
 class MathTutorFlow(Flow[MathTutorState]):
-    # langtrace.init(api_key=os.environ.get('LANGTRACE_API_KEY'))
+    langtrace.init(api_key=os.environ.get('LANGTRACE_API_KEY'))
     language = "Japanese"
 
     algebra = str(ALGEBRA).lower()
@@ -33,6 +33,7 @@ class MathTutorFlow(Flow[MathTutorState]):
     def handle_input(self):
         question_content = input("Input your question: ")
         inputs = {
+            'language': self.language,
             'question_content': question_content,
             'algebra': self.algebra,
             'geometry': self.geometry,
@@ -75,7 +76,6 @@ class MathTutorFlow(Flow[MathTutorState]):
             "language": self.language,
             "domain": question.domain,
             "question": question.question,
-            "answer_options": question.answer_options,
         }
 
         result = AlgebraTutor().crew().kickoff(inputs=tutor_inputs)
@@ -93,7 +93,6 @@ class MathTutorFlow(Flow[MathTutorState]):
             "language": self.language,
             "domain": question.domain,
             "question": question.question,
-            "answer_options": question.answer_options,
             "image_path": question.image_path,
         }
 
@@ -111,7 +110,6 @@ class MathTutorFlow(Flow[MathTutorState]):
             "language": self.language,
             "domain": question.domain,
             "question": question.question,
-            "answer_options": question.answer_options,
         }
 
         result = StatisticsTutor().crew().kickoff(inputs=tutor_inputs)

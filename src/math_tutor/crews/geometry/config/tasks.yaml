@@ -3,15 +3,16 @@ solve_question:
     Given question:
     {question}
     
-    {image_path}
+    Illustration: {image_path}
     
-    Based on the answer options if have: {answer_options}.
+    To infer based on answer options if exists: {answer_options}.
     
     Analyze and extract the provided images and text from the given content.
     - Through activities like observation, manipulation and experimentation, to deepen the understanding of plane ﬁgures by constructing them with a prospect in mind and exploring the relationship between geometrical ﬁgures, and to cultivate the ability to think and represent logically.
     - To understand the fundamental methods for constructing ﬁgures like the bisector of an angle, the perpendicular bisector of a line segment and perpendicular lines, and to make use of them in concrete situations.
     - To understand parallel translation, symmetric transformation and rotational transformation, and to explore the relationship between two geometrical ﬁgures.
     
+    To ask about the relative position of two objects placed in the illustration for more visual information.
     Analyze it, and solve the given question in step-by-step explanation.
   expected_output: |
     Export a answer in {language} where:
