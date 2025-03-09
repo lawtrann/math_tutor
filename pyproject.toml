@@ -1,0 +1,21 @@
+[project]
+name = "math_tutor"
+version = "0.1.0"
+description = "math_tutor using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.102.0,<1.0.0",
+    "langtrace-python-sdk>=3.8.3",
+]
+
+[project.scripts]
+kickoff = "math_tutor.main:kickoff"
+plot = "math_tutor.main:plot"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "flow"

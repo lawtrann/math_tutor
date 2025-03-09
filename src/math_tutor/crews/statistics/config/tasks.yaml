@@ -1,0 +1,19 @@
+solve_question:
+  description: |
+    Given question:
+    {question}
+    Based on the answer options if have: {answer_options}.
+    
+    - To be able to collect data according to a purpose, arrange it into tables and graphs by using a computer and other means, and then read trends in the data focusing on its representative values and its variations.
+    - To understand the necessity and meaning of histograms and representative values.
+    - To grasp and explain trends in the data by using histograms and representative values.
+    Terms and Symbols: mean, median, mode, relative frequency, range, class.
+    
+    Analyze it, and solve the given question in step-by-step explanation.
+  expected_output: |
+    Export a answer in {language} where:
+      - Question: [the question]
+      - Explanation: [a explanation in step-by-step]
+      - Answer: [the final answer]
+    Format to Markdown, no '```'.
+  agent: math_tutor
