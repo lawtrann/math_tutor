@@ -11,7 +11,7 @@ solve_question:
       - Terms and Symbols: natural number, sign, absolute value.
   expected_output: |
     Export a answer in {language} where:
-      - Question: [the question]
+      - Question: [the exactly question content without image path. Do not add any content beyond the provided question]
       - Explanation: [a explanation in step-by-step]
       - Answer: [the final answer]
     Format to Markdown, no '```'.

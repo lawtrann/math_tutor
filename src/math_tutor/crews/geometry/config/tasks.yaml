@@ -12,7 +12,7 @@ solve_question:
       - To ask about the relative position of two objects placed in the illustration for more visual information.
   expected_output: |
     Export a answer in {language} where:
-      - Question: [the question]
+      - Question: [the exactly question content without image path. Do not add any content beyond the provided question]
       - Explanation: [a explanation in step-by-step]
       - Answer: [the final answer]
     Format to Markdown, no '```'.
