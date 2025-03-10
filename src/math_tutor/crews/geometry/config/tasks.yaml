@@ -1,11 +1,10 @@
 solve_question:
   description: |
-    Given question:
-    {question}
+    Given question: {question}
     
     Illustration: {image_path}
     
-    To inter the above questions carefully.
+    . To inter the above questions carefully.
     Analyze them, and solve in step-by-step explanation based on the following:
       - Through activities like observation, manipulation and experimentation, to deepen the understanding of plane ﬁgures by constructing them with a prospect in mind and exploring the relationship between geometrical ﬁgures, and to cultivate the ability to think and represent logically.
       - To understand the fundamental methods for constructing ﬁgures like the bisector of an angle, the perpendicular bisector of a line segment and perpendicular lines, and to make use of them in concrete situations.

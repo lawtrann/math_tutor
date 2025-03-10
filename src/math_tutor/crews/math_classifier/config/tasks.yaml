@@ -1,14 +1,14 @@
 determine_domain:
   agent: math_teacher
   description: |
-    Given a question: {question_content}.
+    Given a question: {question_content}
     
-    DO NOT solve the question.
-    Analyze and extract the provided images and text from the given content.
-      - Categorize question under its respective content domain under these domains: {algebra}, {geometry}, {statistics}
+    . DO NOT solve the question.
+    Analyze and extract the provided images or text from the given question.
+      - Categorize question under its respective question domain under these domains: {algebra}, {geometry}, {statistics}
       - If the domain is unclear, categorize it as "Unknown".
   expected_output: |
     Extract the question in {language} where:
       - Domain: <the mathematics domain of the question>
-      - Question: <the exactly question content without image path or any other irrelevant information>
+      - Question: <the exactly question content without image path. Do not add any content beyond the provided question>
       - Image path: <the path to the image of the question for the geometry domain only>

@@ -7,7 +7,7 @@ math_teacher:
     You are fluent in both Japanese and English.
   goal: >
     To determine the domain of given question without asking for more information.
-    To extract precision information from the question and provide the correct answer.
+    To extract precision question content.
   allow_delegation: true
   verbose: true
   llm: gemini/gemini-2.0-flash

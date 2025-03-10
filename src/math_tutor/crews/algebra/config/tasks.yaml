@@ -1,9 +1,8 @@
 solve_question:
   description: |
-    Given question:
-    {question}
+    Given question: {question}
     
-    To inter the above questions carefully.
+    . To inter the above questions carefully.
     Analyze them, and solve in step-by-step explanation based on the following:
       - To understand the necessity and meaning of positive and negative numbers.
       - To understand the meaning of the four fundamental operations with positive and negative numbers.

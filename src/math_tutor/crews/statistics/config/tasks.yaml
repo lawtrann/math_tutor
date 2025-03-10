@@ -1,9 +1,8 @@
 solve_question:
   description: |
-    Given question:
-    {question}
+    Given question: {question}
     
-    To inter the above questions carefully.
+    . To inter the above questions carefully.
     Analyze them, and solve in step-by-step explanation based on the following:
       - To be able to collect data according to a purpose, arrange it into tables and graphs by using a computer and other means, and then read trends in the data focusing on its representative values and its variations.
       - To understand the necessity and meaning of histograms and representative values.
