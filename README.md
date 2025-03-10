@@ -1,7 +1,5 @@
 ## Math Tutor using CrewAI
 
----
-
 ### Setup local environment using miniconda
 
 - Install: [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/install)
