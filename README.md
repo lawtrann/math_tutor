@@ -6,7 +6,7 @@
   - Create a new environment: `conda create -n math_tutor python=3.12`
   - Choose your Python Interpreter, in this case: `math_tutor (conda env)`
 - Install `uv`: `curl -LsSf https://astral.sh/uv/install.sh | sh`
-- Install `crewai` CLI: `uv tool install crewai`
+- Install `crewai` CLI: `uv tool install crewai` and `uv pip install crewai`
 
 ### Run Math Tutor
 - Remember to add your `GEMINI_API_KEY` into `.env`
@@ -17,3 +17,7 @@
     - e.g:
       - Input your question: `(+7) - (+1)`
       - Input your question: `/your/absolute/image/path.png`
+
+### Example image
+
+- Based on the `example.csv`, you can use [extract_all_questions_from_csv.ipynb](notebook/extract_all_questions_from_csv.ipynb) notebook to extract question images to [example_images](notebook/example_images) folder
