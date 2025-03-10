@@ -2,6 +2,7 @@
 __pycache__/
 lib/
 .DS_Store
+.idea
 
 tests/dev_set/
 tests/test_set/
