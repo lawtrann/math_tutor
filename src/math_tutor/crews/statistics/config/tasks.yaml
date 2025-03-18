@@ -10,7 +10,7 @@ solve_question:
       - Terms and Symbols: mean, median, mode, relative frequency, range, class.
   expected_output: |
     Export a answer in {language} where:
-      - Question: [the exactly question content without image path. Do not add any content beyond the provided question]
+      - Question: [the exactly question content without image path. Do not add any content beyond the provided question. Format the tabular content to Markdown if any]
       - Explanation: [a explanation in step-by-step]
       - Answer: [the final answer]
     Format to Markdown, no '```'.

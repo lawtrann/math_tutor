@@ -1,10 +1,12 @@
 import base64
-from typing import Any, Type
+from typing import Any, Type, Dict
 
 from crewai.tools import BaseTool
 from litellm import completion
 from pydantic import BaseModel, Field
 
+# Global cache dictionary to store image data
+_IMAGE_CACHE: Dict[str, str] = {}
 
 class VisionToolSchema(BaseModel):
     """Input schema for VisionGoogleTool."""
@@ -19,19 +21,36 @@ class VisionTool(BaseTool):
 
     args_schema: Type[BaseModel] = VisionToolSchema
 
+    @staticmethod
+    def _get_image_data(image_path: str) -> str:
+        """Get image data from cache or process it if not cached."""
+        # Return URL directly if it's a web image
+        if image_path.startswith("http"):
+            return image_path
+            
+        # Check if image data is in cache
+        if image_path in _IMAGE_CACHE:
+            print("Hit cache!!!")
+            return _IMAGE_CACHE[image_path]
+        
+        # Process and cache image data if not found
+        with open(image_path, 'rb') as f:
+            img_bytes = f.read()
+        
+        img_b64 = base64.b64encode(img_bytes).decode('utf-8')
+        image_data = f"data:image/png;base64,{img_b64}"
+        
+        # Store in cache
+        _IMAGE_CACHE[image_path] = image_data
+        return image_data
+
     def _run(self, **kwargs: Any) -> str:
         image_path = kwargs.get("image_path")
         if image_path is None:
             return "There is no image path provided."
 
-        if image_path.startswith("http"):
-            image_data = image_path
-        else:
-            with open(image_path, 'rb') as f:
-                img_bytes = f.read()
-
-            img_b64 = base64.b64encode(img_bytes).decode('utf-8')
-            image_data = f"data:image/png;base64,{img_b64}"
+        # Get image data from cache or process it
+        image_data = self._get_image_data(image_path)
 
         try:
             resp = completion(

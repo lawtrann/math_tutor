@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import os
 from typing import Any, Dict, Optional
+from datetime import datetime, time
 
 from crewai.flow import Flow, listen, or_, router, start
 from langtrace_python_sdk import langtrace
@@ -17,11 +18,12 @@ from math_tutor.crews.statistics.statistics_tutor import StatisticsTutor
 class MathTutorState(BaseModel):
     inputs: Optional[Dict[str, Any]] = None
     question: Optional[Question] = None
+    start: datetime = None
 
 
 class MathTutorFlow(Flow[MathTutorState]):
     # langtrace.init(api_key=os.environ.get('LANGTRACE_API_KEY'))
-    language = "Japanese"
+    language = "English"
 
     algebra = str(ALGEBRA).lower()
     geometry = str(GEOMETRY).lower()
@@ -32,6 +34,8 @@ class MathTutorFlow(Flow[MathTutorState]):
     @start()
     def handle_input(self):
         question_content = input("Input your question: ")
+
+        self.state.start = datetime.now()
         inputs = {
             'language': self.language,
             'question_content': question_content,
@@ -125,6 +129,7 @@ class MathTutorFlow(Flow[MathTutorState]):
     @listen(or_(solve_algebra, solve_geometry, solve_statistics, solve_unknown))
     def end(self):
         print("Total costs: ", self.total_cost)
+        print("Total time: ", datetime.now() - self.state.start)
 
 
 def kickoff():

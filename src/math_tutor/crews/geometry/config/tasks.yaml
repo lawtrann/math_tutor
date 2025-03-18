@@ -6,10 +6,11 @@ solve_question:
     
     . To inter the above questions carefully.
     Analyze them, and solve in step-by-step explanation based on the following:
+      - Extract the question text and any relevant geometrical properties from the image.
       - Through activities like observation, manipulation and experimentation, to deepen the understanding of plane ﬁgures by constructing them with a prospect in mind and exploring the relationship between geometrical ﬁgures, and to cultivate the ability to think and represent logically.
       - To understand the fundamental methods for constructing ﬁgures like the bisector of an angle, the perpendicular bisector of a line segment and perpendicular lines, and to make use of them in concrete situations.
       - To understand parallel translation, symmetric transformation and rotational transformation, and to explore the relationship between two geometrical ﬁgures.
-      - To ask about the relative position of two objects placed in the illustration for more visual information.
+      - To ask about the relative position of two objects placed in the illustration, and and specify the direction of their angles, checking if there are any reflections or rotations for more visual information.
   expected_output: |
     Export a answer in {language} where:
       - Question: [the exactly question content without image path. Do not add any content beyond the provided question]

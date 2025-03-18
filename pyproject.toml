@@ -7,6 +7,9 @@ requires-python = ">=3.10,<3.13"
 dependencies = [
     "crewai[tools]>=0.102.0,<1.0.0",
     "langtrace-python-sdk>=3.8.3",
+    "notebook>=7.3.2",
+    "opik>=1.6.5",
+    "selenium>=4.29.0",
 ]
 
 [project.scripts]

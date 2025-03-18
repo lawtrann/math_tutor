@@ -2,11 +2,8 @@
 
 ### Setup local environment using miniconda
 
-- Install: [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/install)
-  - Create a new environment: `conda create -n math_tutor python=3.12`
-  - Choose your Python Interpreter, in this case: `math_tutor (conda env)`
 - Install `uv`: `curl -LsSf https://astral.sh/uv/install.sh | sh`
-- Install `crewai` CLI: `uv tool install crewai` and `uv pip install crewai`
+- Then run `uv sync`
 
 ### Run Math Tutor
 - Remember to add your `GEMINI_API_KEY` into `.env`
